@@ -1,6 +1,8 @@
 
 --require 'lovedebug'
 
+-- to run in notepadd++ copy this into run
+---     "D:\Sojourn\prototype\love_prototype\LOVE\love.exe" "$(CURRENT_DIRECTORY)"
 
 function love.load()
 
