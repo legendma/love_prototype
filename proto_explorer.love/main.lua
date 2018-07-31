@@ -8,7 +8,7 @@ function love.load()
 
 game={}
 game.version="0.1"
-luascriptpath = "D://Dropbox//Lua//proto_explorer.love//"
+--luascriptpath = "D://Sojourn//prototype//love_prototype//proto_explorer.love//"
 
 
 
