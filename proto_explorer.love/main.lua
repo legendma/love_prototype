@@ -19,7 +19,11 @@ require 'main_menu_explorer'
 require 'main_menu_builder'
 require 'main_menu_Strategist'
 require 'main_menu_planner'
+require 'explorer'
 
+
+require 'mouse'
+require 'draw_hex'
 
 
 --set the intial state upon application start
@@ -33,8 +37,9 @@ end
 
 
 function love.update(dt)
-
+mouse.update()
 state.update()
+
 
 end
 

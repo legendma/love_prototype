@@ -2,6 +2,8 @@
 main_menu = {}
 
 require 'button'
+require 'mouse'
+
 
 
 
@@ -21,6 +23,9 @@ function main_menu.enter_state()
 	button.w[0] = 150
 	button.h[0] = 30
 	button.font[0] = 18
+	button.font_color1[0] = 0
+	button.font_color2[0] = 0
+	button.font_color3[0] = 0
 	button.color1[0] = 0
 	button.color2[0] = 0
 	button.color3[0] = 0
@@ -42,6 +47,9 @@ function main_menu.enter_state()
 	button.w[1] = 150
 	button.h[1] = 30
 	button.font[1] = 18
+	button.font_color1[1] = 0
+	button.font_color2[1] = 0
+	button.font_color3[1] = 0
 	button.color1[1] = 0
 	button.color2[1] = 0
 	button.color3[1] = 0
@@ -61,6 +69,9 @@ function main_menu.enter_state()
 	button.w[2] = 150
 	button.h[2] = 30
 	button.font[2] = 18
+	button.font_color1[2] = 0
+	button.font_color2[2] = 0
+	button.font_color3[2] = 0
 	button.color1[2] = 0
 	button.color2[2] = 0
 	button.color3[2] = 0
@@ -78,6 +89,9 @@ function main_menu.enter_state()
 	button.w[3] = 150
 	button.h[3] = 30
 	button.font[3] = 18
+	button.font_color1[3] = 0
+	button.font_color2[3] = 0
+	button.font_color3[3] = 0
 	button.color1[3] = 0
 	button.color2[3] = 0
 	button.color3[3] = 0
@@ -94,11 +108,19 @@ function main_menu.enter_state()
 	button.w[4] = 150
 	button.h[4] = 30
 	button.font[4] = 18
+	button.font_color1[4] = 0
+	button.font_color2[4] = 0
+	button.font_color3[4] = 0
 	button.color1[4] = 0
 	button.color2[4] = 0
 	button.color3[4] = 0
 	button.style[4] = "line"
 	button.on_clicked[4] = on_exit_button_clicked
+
+
+
+
+
 
 end
 
@@ -106,12 +128,14 @@ end
 
 function main_menu.update()
 
-
-	if love.mouse.isDown(1) then
 	
+
+	if mouse.down_event == true then
+
 		for i in pairs (button.name) do
 			if button.is_clicked(button.x[i], button.y[i],button.w[i], button.h[i]) then
-				button.on_clicked[i]()
+					button.on_clicked[i]()
+
 			end
 			
 		end
@@ -120,6 +144,7 @@ function main_menu.update()
 	
 	
 end
+
 
 
 
@@ -148,7 +173,7 @@ function main_menu.draw()
 	
 	
 	for i in pairs (button.name) do
-		button.draw(button.name[i],button.x[i], button.y[i],button.w[i], button.h[i], button.font[i], button.color1[i], button.color2[i], button.color3[i], button.style[i])
+		button.draw(button.name[i],button.x[i], button.y[i],button.w[i], button.h[i], button.font[i], button.font_color1[i], button.font_color2[i], button.font_color3[i], button.color1[i], button.color2[i], button.color3[i], button.style[i])
 	end
 	
 end
