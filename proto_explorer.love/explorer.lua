@@ -2,6 +2,7 @@ explorer = {}
 
 require 'button'
 require 'draw_hex'
+require 'hex_grid'
 
 
 function explorer.enter_state()
@@ -56,7 +57,26 @@ function explorer.draw()
 		button.draw(button.name[i],button.x[i], button.y[i],button.w[i], button.h[i], button.font[i],button.font_color1[i], button.font_color2[i], button.font_color3[i], button.color1[i], button.color2[i], button.color3[i], button.style[i])
 	end
 
-draw_hex.draw(400,400,200)
+hex_grid_origin_x = 400
+hex_grid_origin_y = 400
+hex_grid_size = 100
+	
+hex_grid_x = 0
+hex_grid_y = 0
+hex_grid_z = 0
+	
+hex_pixel_x, hex_pixel_y = hex_grid.convert_to_pixel(hex_grid_origin_x, hex_grid_origin_y, hex_grid_x, hex_grid_y, hex_grid_z, hex_grid_size)
+
+draw_hex.draw(hex_pixel_x,hex_pixel_y,hex_grid_size)
+
+hex_grid_x = 1
+hex_grid_y = 0
+hex_grid_z = -1
+	
+hex_pixel_x, hex_pixel_y = hex_grid.convert_to_pixel(hex_grid_origin_x, hex_grid_origin_y, hex_grid_x, hex_grid_y, hex_grid_z, hex_grid_size)
+
+	
+draw_hex.draw(hex_pixel_x,hex_pixel_y,hex_grid_size)
 
 
 

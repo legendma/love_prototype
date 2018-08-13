@@ -4,6 +4,8 @@
 -- to run in notepadd++ copy this into run
 ---     "D:\Sojourn\prototype\love_prototype\LOVE\love.exe" "$(CURRENT_DIRECTORY)"
 
+
+
 function love.load()
 
 game={}
@@ -24,6 +26,7 @@ require 'explorer'
 
 require 'mouse'
 require 'draw_hex'
+require 'hex_grid'
 
 
 --set the intial state upon application start
@@ -31,6 +34,10 @@ require 'draw_hex'
 state={}
 state = main_menu
 state.enter_state()
+
+
+--get game window size
+game_window_width, game_window_height = love.window.getDimensions()
 
 end
 
