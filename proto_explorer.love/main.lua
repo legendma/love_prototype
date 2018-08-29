@@ -37,7 +37,9 @@ state.enter_state()
 
 
 --get game window size
-game_window_width, game_window_height = love.window.getDimensions()
+--game_window_width, game_window_height = love.graphics.getDimensions()
+
+
 
 end
 

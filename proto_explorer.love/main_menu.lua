@@ -7,6 +7,7 @@ require 'mouse'
 
 
 
+
 function main_menu.enter_state()
 
 -- define indivual buttons and thir properties
@@ -18,11 +19,11 @@ function main_menu.enter_state()
 	end
 	
 	button.name[0] = "Explorer"
-	button.x[0] = 325
-	button.y[0] = 75
-	button.w[0] = 150
-	button.h[0] = 30
-	button.font[0] = 18
+	button.x[0] = 0.4*game_window_width
+	button.y[0] = 0.125*game_window_height
+	button.w[0] = 0.1875*game_window_width
+	button.h[0] = 0.05 * game_window_height
+	button.font[0] = 0.03*game_window_height
 	button.font_color1[0] = 0
 	button.font_color2[0] = 0
 	button.font_color3[0] = 0
@@ -42,11 +43,11 @@ function main_menu.enter_state()
 	end
 	
 	button.name[1] = "Builder"
-	button.x[1] = 325
-	button.y[1] = 155
-	button.w[1] = 150
-	button.h[1] = 30
-	button.font[1] = 18
+	button.x[1] = 0.4*game_window_width
+	button.y[1] = 0.258*game_window_height
+	button.w[1] = 0.1875*game_window_width
+	button.h[1] = 0.05 * game_window_height
+	button.font[1] =0.03*game_window_height
 	button.font_color1[1] = 0
 	button.font_color2[1] = 0
 	button.font_color3[1] = 0
@@ -64,11 +65,11 @@ function main_menu.enter_state()
 	end
 	
 	button.name[2] = "Strategist"
-	button.x[2] = 325
-	button.y[2] = 235
-	button.w[2] = 150
-	button.h[2] = 30
-	button.font[2] = 18
+	button.x[2] = 0.4*game_window_width
+	button.y[2] = 0.391*game_window_height
+	button.w[2] = 0.1875*game_window_width
+	button.h[2] = 0.05 * game_window_height
+	button.font[2] = 0.03*game_window_height
 	button.font_color1[2] = 0
 	button.font_color2[2] = 0
 	button.font_color3[2] = 0
@@ -84,11 +85,11 @@ function main_menu.enter_state()
 		change_state(main_menu_planner)
 	end
 	button.name[3] = "Planner"
-	button.x[3] = 325
-	button.y[3] = 315
-	button.w[3] = 150
-	button.h[3] = 30
-	button.font[3] = 18
+	button.x[3] = 0.4*game_window_width
+	button.y[3] = 0.525 * game_window_height
+	button.w[3] = 0.1875*game_window_width
+	button.h[3] = 0.05 * game_window_height
+	button.font[3] = 0.03*game_window_height
 	button.font_color1[3] = 0
 	button.font_color2[3] = 0
 	button.font_color3[3] = 0
@@ -103,11 +104,11 @@ function main_menu.enter_state()
 		love.event.quit()
 	end
 	button.name[4] = "Exit"
-	button.x[4] = 325
-	button.y[4] = 395
-	button.w[4] = 150
-	button.h[4] = 30
-	button.font[4] = 18
+	button.x[4] = 0.4*game_window_width
+	button.y[4] = 0.658 * game_window_height
+	button.w[4] = 0.1875*game_window_width
+	button.h[4] = 0.05 * game_window_height
+	button.font[4] = 0.03*game_window_height
 	button.font_color1[4] = 0
 	button.font_color2[4] = 0
 	button.font_color3[4] = 0
@@ -159,17 +160,17 @@ end
 function main_menu.draw()
 
 
-	love.graphics.setNewFont(25)
+	love.graphics.setNewFont(0.0366*game_window_height)
 
 	-- main menu hedder
 	love.graphics.setColor(159/255, 129/255, 112/255)
-	love.graphics.rectangle("fill", 0, 0, 800, 50)
+	love.graphics.rectangle("fill", 0, 0, game_window_width, 0.0833*game_window_height)
 	love.graphics.setColor(0, 0, 0)
-	love.graphics.printf("Sojourn" .. " v" .. game.version,250,10,300,"center")
+	love.graphics.printf("Sojourn" .. " v" .. game.version,0.3125*game_window_width,0.0166*game_window_height,0.375*game_window_width,"center")
 
 	--main menu text
 	love.graphics.setColor(0.8, 0.8, 0.8)
-	love.graphics.rectangle("fill", 250, 50, 300, 450)
+	love.graphics.rectangle("fill", 0.3125*game_window_width, 0.0833*game_window_height, 0.375*game_window_width, 0.75*game_window_height)
 	
 	
 	for i in pairs (button.name) do
