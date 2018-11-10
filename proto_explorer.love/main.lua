@@ -27,6 +27,7 @@ require 'explorer'
 require 'mouse'
 require 'draw_hex'
 require 'hex_grid'
+--require 'generate_hex_grid_coords'
 
 
 --set the intial state upon application start
