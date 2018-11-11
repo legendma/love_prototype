@@ -1,11 +1,6 @@
 hex_grid = {}
 
 
-hex_grid.origin_x = {}
-hex_grid.origin_y = {}
-
-
-
 function hex_grid.convert_to_pixel(hex_grid_origin_x, hex_grid_origin_y, hex_grid_x, hex_grid_y, hex_grid_z, hex_size)
 
 local hex_width = 2* hex_size
